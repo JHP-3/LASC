@@ -14,6 +14,7 @@ python3 main.py \
   --ckpts_path saved_ckpts
 ```
 ## Feature optimization
+```
 python3 PIN_aug.py \
 --dataset <source_dataset> \
 --data_root <path_to_source_dataset> \
@@ -21,7 +22,9 @@ python3 PIN_aug.py \
 --resize_feat \
 --domain_desc <target_domain_description>  \
 --save_dir <directory_for_saved_statistics>
+```
 ## Model adaptation
+```
 python3 main.py \
 --dataset <source_dataset> \
 --data_root <path_to_source_dataset> \
@@ -33,4 +36,20 @@ python3 main.py \
 --train_aug \
 --total_itrs 2000 \ 
 --path_mu_sig <path_to_augmented_statistics>
+```
 ## Evaluation
+```
+python3 main.py \
+--dataset <dataset_name> \
+--data_root <dataset_path> \
+--ckpt <path_to_tested_model> \
+--test_only \
+--val_batch_size 1 \
+--ACDC_sub <ACDC_subset_if_tested_on_ACDC>   
+```
+## Inference&Visualization
+```
+python3 predict.py \
+--ckpt <ckpt_path> \
+--save_val_results_to <directory_for_saved_output_images>
+```
