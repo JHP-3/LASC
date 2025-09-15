@@ -19,3 +19,16 @@ python3 PIN_aug.py \
 --resize_feat \
 --domain_desc <target_domain_description>  \
 --save_dir <directory_for_saved_statistics>
+## Model adaptation
+python3 main.py \
+--dataset <source_dataset> \
+--data_root <path_to_source_dataset> \
+--ckpt <path_to_source_checkpoint> \
+--batch_size 8 \
+--lr 0.01 \
+--ckpts_path adapted \
+--freeze_BB \
+--train_aug \
+--total_itrs 2000 \ 
+--path_mu_sig <path_to_augmented_statistics>
+## Evaluation
