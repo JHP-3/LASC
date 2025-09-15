@@ -2,6 +2,7 @@
 # Datasets
 # Running LASC
 ## source training
+```
 python3 main.py \
   --dataset <source_dataset> \
   --data_root <path_to_source_dataset> \
@@ -11,6 +12,7 @@ python3 main.py \
   --batch_size 2 \
   --freeze_BB \
   --ckpts_path saved_ckpts
+```
 ## Feature optimization
 python3 PIN_aug.py \
 --dataset <source_dataset> \
